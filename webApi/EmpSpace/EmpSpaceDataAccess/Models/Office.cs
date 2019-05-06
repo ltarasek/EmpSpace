@@ -12,6 +12,8 @@ namespace EmpSpaceDataAccess.Models
         public string City { get; set; }
         public string PostalCode { get; set; }
         public string Country { get; set; }
+
+        //tel nie jako int
         public int Phone { get; set; }
 
         public List<Employee> Employees { get; set; }

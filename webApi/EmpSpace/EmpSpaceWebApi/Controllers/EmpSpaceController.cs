@@ -18,7 +18,6 @@ namespace EmpSpaceWebApi.Controllers
             _empRepository = empRepository;
         }
 
-
         
         [HttpGet]
         public IActionResult GetEmployees()
