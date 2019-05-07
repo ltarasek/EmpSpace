@@ -21,5 +21,13 @@ namespace EmpSpaceDataAccess.Repository
             }
         }
 
+        public Employee GetEmployee(int id)
+        {
+            using (var empContext = new EmpSpaceContext())
+            {
+                return empContext.Employee.Include(emp => emp.Position).FirstOrDefault(emp=>emp.Id == id);
+            }
+        }
+
     }
 }

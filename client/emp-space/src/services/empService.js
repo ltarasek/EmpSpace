@@ -6,8 +6,8 @@ export function GetAllEmp() {
     return fetch(url).then(response => response.json());
 }
 
-// export function GetEmp(id) {
-//     var url = BASE_URL + "api/EmpSpace/" + id;
+export function GetEmp(id) {
+    var url = BASE_URL + "api/EmpSpace/" + id;
 
-//     return fetch(url).then(response => response.json());
-// }
+    return fetch(url).then(response => response.json());
+}

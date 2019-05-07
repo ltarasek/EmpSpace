@@ -9,7 +9,6 @@ namespace EmpSpaceDataAccess.Interfaces
     public interface IEmpSpaceRepository
     {
         List<BaseEmployeeDto> GetEmployees();
-        
-
+        Employee GetEmployee(int id);
     }
 }

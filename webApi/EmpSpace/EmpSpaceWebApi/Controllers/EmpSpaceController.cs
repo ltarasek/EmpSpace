@@ -26,14 +26,15 @@ namespace EmpSpaceWebApi.Controllers
             return Ok(allEmployee);
         }
 
-   
 
-        //// GET api/values/5
-        //[HttpGet("{id}")]
-        //public ActionResult<string> Get(int id)
-        //{
-        //    return "value";
-        //}
+
+        // GET api/values/5
+        [HttpGet("{id}")]
+        public IActionResult GetEmployee(int id)
+        {
+            var employee = _empRepository.GetEmployee(id);
+            return Ok(employee);
+        }
 
         //// POST api/values
         //[HttpPost]

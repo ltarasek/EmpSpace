@@ -22,10 +22,10 @@ export default class StartPage extends React.Component {
     }
 
     render() {
-        if (this.state.employee.length == 0) { return "Loading..."; }
+        if (this.state.employee.length === 0) { return "Loading..."; }
 
         var employee = this.state.employee.map(emp => {
-            return <EmpStartPage key={"emp-key-" + emp.id} name={emp.name} lastName={emp.lastName} />
+            return <EmpStartPage key={"emp-key-" + emp.id} name={emp.name} lastName={emp.lastName} id={emp.id} />
         });
 
         return (
