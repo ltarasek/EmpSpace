@@ -29,9 +29,12 @@ export default class StartPage extends React.Component {
         });
 
         return (
-            <div>
-                <h1>Hello!</h1>
-                {employee}
+            <div id="mainCard">
+                <h1>EmpSpace!</h1>
+                <p>Twoja przestrzeń, w której znajdziesz wszystkie potrzebne informacje!</p>
+                <section>
+                    {employee}
+                </section>
             </div>
         );
     }

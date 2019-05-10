@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 import { GetEmp } from '../../services/empService';
+import EmployeePersonalDetails from '../../components/EmpDetailsComponents/EmployeePersonalData'
 
 export default class EmpDetails extends React.Component {
     constructor(props) {
@@ -26,8 +27,14 @@ export default class EmpDetails extends React.Component {
                 <Link to={"/"}>
                     <div>HOME</div>
                 </Link>
-                <h3>{emp.name} {emp.lastName}</h3>
-                <h3>{emp.address} {emp.postalCode} {emp.city} {emp.country}</h3>
+                <EmployeePersonalDetails 
+                name = {emp.name} 
+                lastName={emp.lastName} 
+                address={emp.address} 
+                city={emp.city} 
+                phone = {emp.phone}
+                birthday = {emp.birthday}
+                />
 
             </div>
         );

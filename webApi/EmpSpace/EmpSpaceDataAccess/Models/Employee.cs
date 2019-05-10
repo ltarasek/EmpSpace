@@ -19,7 +19,9 @@ namespace EmpSpaceDataAccess.Models
 
         public DateTime BirthDate { get; set; }
         public List<Position> Position { get; set; }
-  
+
+        public Office Office { get; set; }
+
         //Zastanów się nad zmianą typu tego
         public int SupervisorId { get; set; }
     }

@@ -1,10 +1,18 @@
 .EmpCard {
     display: flex;
-
     justify-content: space-around;
-    border: 1px black solid;
-    width: 20%;
     margin: 2% auto;
+    background-color: rgb(243, 241, 241);
+    font-weight: lighter;
+}
+
+.LinkEmployeeList{
+    text-decoration: none;
+    color: rgb(61, 60, 60);
+}
+
+.EmpCard > h4{
+    font-weight: lighter;
 }
 
 .avatar {
@@ -16,3 +24,4 @@
     background-image: url('https://sm.ign.com/ign_nordic/news/a/avatar-the/avatar-the-last-airbender-is-getting-expansion-novels_6519.jpg');
     background-size: cover; 
 }
+

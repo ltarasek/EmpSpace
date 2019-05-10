@@ -14,10 +14,12 @@ namespace EmpSpaceDataAccess.Repository
         {
             using (var empContext = new EmpSpaceContext())
             {
-                return empContext.Employee.Select(emp => new BaseEmployeeDto() {
+                return empContext.Employee.Select(emp => new BaseEmployeeDto()
+                {
                     Id = emp.Id,
                     Name = emp.Name,
-                    LastName = emp.LastName }).ToList();
+                    LastName = emp.LastName
+                }).ToList();
             }
         }
 
@@ -25,7 +27,10 @@ namespace EmpSpaceDataAccess.Repository
         {
             using (var empContext = new EmpSpaceContext())
             {
-                return empContext.Employee.Include(emp => emp.Position).FirstOrDefault(emp=>emp.Id == id);
+                return empContext.Employee
+                    .Include(emp => emp.Position)
+                    .Include(emp => emp.Office)
+                    .FirstOrDefault(emp => emp.Id == id);
             }
         }
 
